@@ -17,6 +17,10 @@ func newDeck() deck {
 	}
 	return cards
 }
+//multiple returns
+func deal(d deck,handsize int)(deck,deck){
+	return d[:handsize],d[handsize:]
+}
 //receiver
 func (d deck) print() {
 	for _,card := range d{
